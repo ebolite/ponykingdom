@@ -21,3 +21,19 @@ DarkRP.createCategory{
 Add new categories under the next line!
 ---------------------------------------------------------------------------]]
 
+DarkRP.createCategory {
+    name = "Debug",
+    categorises = "jobs",
+    startExpanded = true,
+    color = Color(112, 196, 255, 255),
+    sortOrder = 200,
+}
+
+DarkRP.createCategory {
+    name = "Debugpony Items",
+    categorises = "entities",
+    startExpanded = true,
+    color = Color(112, 196, 255, 255),
+    canSee = function(ply) return ply:Team() == TEAM_DEBUGPONY end,
+    sortOrder = 200,
+}

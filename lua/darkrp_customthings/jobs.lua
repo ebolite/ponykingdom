@@ -16,6 +16,36 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
 Add your custom jobs under the following line:
 ---------------------------------------------------------------------------]]
 
+local _, existingMailpony = DarkRP.getJobByCommand("mailpony")
+TEAM_MAILPONY = existingMailpony or DarkRP.createJob("Mailpony", {
+        color = Color(112, 196, 255, 255),
+        model = "models/ppm/player_default_base_new.mdl",
+        description = "Deliver packages to friendly ponies.",
+        weapons = {},
+        command = "mailpony",
+        max = 3,
+        salary = 3,
+        admin = 0,
+        vote = false,
+        hasLicense = false,
+        category = "Citizens",
+    })
+
+local _, existingDebugpony = DarkRP.getJobByCommand("debugpony")
+TEAM_DEBUGPONY = existingDebugpony or DarkRP.createJob("Debugpony", {
+        color = Color(112, 196, 255, 255),
+        model = "models/ppm/player_default_base_new.mdl",
+        description = "Development job for testing PonyRP inventory shapes, descriptions, and physical items.",
+        weapons = {},
+        command = "debugpony",
+        max = 0,
+        salary = 0,
+        admin = 0,
+        vote = false,
+        hasLicense = false,
+        category = "Debug",
+    })
+
 
 
 --[[---------------------------------------------------------------------------
